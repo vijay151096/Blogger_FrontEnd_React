@@ -1,0 +1,14 @@
+.cb-column {
+    float: left;
+    width: 10%;
+    padding: 5px;
+}
+.cb-row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.cb-align{
+    width: 50px
+}

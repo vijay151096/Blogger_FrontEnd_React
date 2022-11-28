@@ -1,0 +1,9 @@
+.nb-bodysizing {
+    height: 100px;
+    width: 100%
+}
+
+.input_text{
+    background: rgb(17, 33, 49);
+    border: 2px ridge #00A4BD;
+}

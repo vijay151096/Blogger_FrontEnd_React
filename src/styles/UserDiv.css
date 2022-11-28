@@ -1,0 +1,29 @@
+
+.ud-budctu {
+    width: 75%;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    padding: 2rem;
+    background: rgb(17, 33, 49);
+    overflow: hidden;
+    transition: border 0.2s ease 0s;
+    cursor: pointer;
+}
+
+.ud-borderDiv {
+    border-radius: 5px;
+    border: 2px ridge #00A4BD;
+    padding: 2rem;
+    border-radius: 12px;
+}
+
+.ud-allign{
+    margin: auto;
+    width: 75%;
+    padding: 10px;
+    align: center;
+    margin-top: 10px;
+    padding-right: 10px;
+}

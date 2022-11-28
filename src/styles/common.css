@@ -1,0 +1,12 @@
+.common-allign{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#NewBlogDiv{
+    display: None;
+}
