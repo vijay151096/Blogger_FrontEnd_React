@@ -1,0 +1,14 @@
+.ed-column {
+    float: right;
+    width: 10%;
+    padding: 5px;
+}
+.ed-row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.ed-align{
+    width: 50px;
+}

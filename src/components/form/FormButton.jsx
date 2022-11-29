@@ -1,6 +1,7 @@
 import React, {useContext} from "react";
 import GlobalContext from "../../context/GlobalContext";
 import axios from "axios";
+import env from '../../config/config'
 
 const FormButton = props => {
 
@@ -16,7 +17,7 @@ const FormButton = props => {
 const login = async(setLoggedIn, setLoggedInUserId, setLoggedInUserToken) => {
     var email = document.getElementById("Username").value;
     var password = document.getElementById("Password").value;
-    var url = "https://bloggernodejs.herokuapp.com/auth/login"
+    var url = `${env.SERVER_URL}/auth/login`
     const response = await axios.post(url, {email, password} )
     if(response.status === 200){
         setLoggedIn(true)

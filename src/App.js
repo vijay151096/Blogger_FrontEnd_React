@@ -5,12 +5,10 @@ import Login from "./components/login";
 import Home from "./components/Home"
 import "./styles/common.css"
 
+
 function App() {
 
     const { loggedIn } = useContext(GlobalContext)
-
-    console.log(loggedIn)
-
     if(!loggedIn){
         return (
            <Login />

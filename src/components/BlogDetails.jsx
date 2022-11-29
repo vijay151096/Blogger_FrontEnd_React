@@ -2,6 +2,7 @@ import {useContext, useEffect, useState} from "react";
 import globalContext from "../context/GlobalContext";
 import axios from "axios";
 import Blog from "./Blog";
+import env from '../config/config'
 
 const BlogDetails = () => {
 
@@ -10,7 +11,9 @@ const BlogDetails = () => {
     useEffect( () => {
         async function getBlogs() {
             //var url = "https://bloggernodejs.herokuapp.com/blog"
-            var url = "http://localhost:9005/blog/search?sort="
+            var url = `${env.SERVER_URL}/blog/search`
+            var queryParam = "?sort=-createdAt"
+            url += queryParam
             var headers = {"Authorization": `Bearer ${loggedInUserToken}`}
             const response = await axios.get(url, {headers})
             if (response.status === 200) {

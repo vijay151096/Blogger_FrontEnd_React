@@ -3,20 +3,28 @@ import Cancel from "../images/cancel.png";
 import axios from "axios";
 import {useContext, useState} from "react";
 import globalContext from "../context/GlobalContext";
+import env from '../config/config'
 
 function SaveCancel(){
 
     const [blogs, setBlogsDetails] = useState([])
     const {loggedInUserToken, loggedInUserId} = useContext(globalContext)
 
+    const cleanNewBlogDiv = () => {
+        document.getElementById("nb_title").value = ""
+        document.getElementById("nb_body").value = ""
+        document.getElementById("nb_tags").value = ""
+    }
+
     const hideNewBlog = () => {
+        cleanNewBlogDiv();
         document.getElementById("NewBlogDiv").style.display = "none";
     }
 
+
     const saveNewBlog = () => {
         async function getBlogs() {
-            //var url = "https://bloggernodejs.herokuapp.com/blog"
-            let url = "http://localhost:9005/blog"
+            let url = `${env.SERVER_URL}/blog`
             let headers = {"Authorization": `Bearer ${loggedInUserToken}`}
             let data = {
                 title: document.getElementById("nb_title").value,
@@ -26,14 +34,8 @@ function SaveCancel(){
 
             }
             const response = await axios.post(url, data, { headers })
-            // const response = await axios.post(url, body)
-            // const response = await axios({
-            //     url: url,
-            //     method: "post",
-            //     data,
-            //     headers
-            // })
             if (response.status === 201) {
+                cleanNewBlogDiv()
                 setBlogsDetails([response.data.data.response, ...blogs])
             }
         }

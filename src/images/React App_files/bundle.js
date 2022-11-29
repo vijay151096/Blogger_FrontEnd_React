@@ -101,7 +101,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _styles_blog_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../styles/blog.css */ "./src/styles/blog.css");
-/* harmony import */ var _commentsbar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./commentsbar */ "./src/components/commentsbar.jsx");
+/* harmony import */ var _commentsbar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./commentsBar */ "./src/components/commentsbar.jsx");
 /* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-dev-runtime */ "./node_modules/react/jsx-dev-runtime.js");
 /* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
 __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
@@ -233,7 +233,7 @@ const BlogDetails = () => {
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
     async function getBlogs() {
       //var url = "https://bloggernodejs.herokuapp.com/blog"
-      var url = "http://localhost:9005/blog/search";
+      var url = "`${env.SERVER_URL}/blog/search";
       var headers = {
         "Authorization": `Bearer ${loggedInUserToken}`
       };
@@ -647,7 +647,7 @@ const UserDiv = () => {
     getUserDetail();
     async function getUserDetail() {
       //var url = "https://bloggernodejs.herokuapp.com/blog"
-      var url = `http://localhost:9005/user/${loggedInUserId}`;
+      var url = ``${env.SERVER_URL}/user/${loggedInUserId}`;
       const headers = {
         "Authorization": `Bearer ${loggedInUserToken}`
       };
@@ -805,7 +805,7 @@ if (typeof Promise !== 'undefined' && $ReactRefreshCurrentExports$ instanceof Pr
 
 /***/ "./src/components/commentsbar.jsx":
 /*!****************************************!*\
-  !*** ./src/components/commentsbar.jsx ***!
+  !*** ./src/components/CommentsBar.jsx ***!
   \****************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
@@ -822,7 +822,7 @@ __webpack_require__.r(__webpack_exports__);
 /* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
 __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
 
-var _jsxFileName = "/Users/vijay/IdeaProjects/BeachTime/Blogger_React/blogger/src/components/commentsbar.jsx";
+var _jsxFileName = "/Users/vijay/IdeaProjects/BeachTime/Blogger_React/blogger/src/components/commentsBar.jsx";
 
 
 

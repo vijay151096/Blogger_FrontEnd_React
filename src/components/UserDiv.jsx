@@ -2,6 +2,7 @@ import React, {useContext, useEffect} from 'react'
 import '../styles/UserDiv.css'
 import globalContext from "../context/GlobalContext";
 import axios from "axios";
+import env from '../config/config'
 
 const UserDiv = () => {
 
@@ -11,8 +12,7 @@ const UserDiv = () => {
     useEffect( () => {
         getUserDetail()
         async function getUserDetail() {
-            //var url = "https://bloggernodejs.herokuapp.com/blog"
-            var url = `http://localhost:9005/user/${loggedInUserId}`
+            var url = `${env.SERVER_URL}/user/${loggedInUserId}`
             const headers = {"Authorization": `Bearer ${loggedInUserToken}`};
             const response = await axios.get(url, {headers})
             if (response.status === 200) {
