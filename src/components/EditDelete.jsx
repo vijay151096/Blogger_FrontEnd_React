@@ -17,11 +17,20 @@ function EditDelete({blog}){
 
     }
 
+    const editBlog = async() => {
+        document.getElementById("NewBlogDiv").style.display = "block";
+        document.getElementById("nb_title").value = blog.title
+        document.getElementById("nb_body").value = blog.body
+        document.getElementById("nb_tags").value = blog.tags
+        document.getElementById("nb_blogId").value = blog._id
+        document.getElementById("nb_blogUserId").value = blog.user._id
+    }
+
     return(
         <>
             <div className="ed-row">
                 <div className="ed-column">
-                    <img className="ed-align" src={Edit} alt={"edit"}/>
+                    <img className="ed-align" onClick={editBlog} src={Edit} alt={"edit"}/>
                 </div>
                 <div className="ed-column">
                     <img className="ed-align" onClick={deleteBlog} src={Delete} alt={"Delete"}/>

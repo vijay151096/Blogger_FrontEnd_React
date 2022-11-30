@@ -10,7 +10,6 @@ const BlogDetails = () => {
     const {loggedInUserToken} = useContext(globalContext)
     useEffect( () => {
         async function getBlogs() {
-            //var url = "https://bloggernodejs.herokuapp.com/blog"
             var url = `${env.SERVER_URL}/blog/search`
             var queryParam = "?sort=-createdAt"
             url += queryParam

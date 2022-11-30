@@ -11,6 +11,8 @@ function NewBlog(){
             Tags :
             <h1><input type="input" id="nb_tags" className="input_text" placeholder="Enter the Tags"/></h1>
             <SaveCancel />
+            <input type="input" className="input_text" value="false" id="nb_blogUserId" hidden="hidden"/>
+            <input type="input" className="input_text" value="" id="nb_blogId" hidden="hidden"/>
         </div>
     )
 }

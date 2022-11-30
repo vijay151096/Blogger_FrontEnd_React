@@ -18,7 +18,7 @@ const login = async(setLoggedIn, setLoggedInUserId, setLoggedInUserToken) => {
     var email = document.getElementById("Username").value;
     var password = document.getElementById("Password").value;
     var url = `${env.SERVER_URL}/auth/login`
-    const response = await axios.post(url, {email, password} )
+    const response = await axios.post(url, {email, password}, {withCredentials: true})
     if(response.status === 200){
         setLoggedIn(true)
         setLoggedInUserId(response.data.data.id)

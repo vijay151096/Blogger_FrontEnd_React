@@ -17,6 +17,7 @@
     border: 2px ridge #00A4BD;
     padding: 2rem;
     border-radius: 12px;
+    background: rgb(17, 33, 49);
 }
 
 .ud-allign{
@@ -26,4 +27,23 @@
     align: center;
     margin-top: 10px;
     padding-right: 10px;
+}
+
+.ud-column {
+    float: left;
+    width: 10%;
+    padding: 5px;
+}
+.ud-row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.ud-align2{
+    float: right;
+    padding: 30px;
+}
+.ud-imgalign{
+    width: 50px;
 }
