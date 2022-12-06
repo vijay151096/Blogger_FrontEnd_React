@@ -1,0 +1,19 @@
+.bdv-column {
+    float: left;
+    width: 10%;
+    padding: 5px;
+}
+.bdv-row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.bdv-align{
+    width: 50px;
+    padding-left: 50px;
+    padding-top: 50px;
+}
+.bdv-align-blog{
+
+}

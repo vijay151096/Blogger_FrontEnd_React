@@ -1,10 +1,12 @@
-import {useParams} from "react-router-dom";
+import {Redirect, useParams} from "react-router-dom";
 import env from "../config/config";
 import axios from "axios";
 import {useContext, useEffect, useState} from "react";
 import globalContext from "../context/GlobalContext";
 import Blog from "./Blog";
 import CommentList from "./CommentList";
+import Back from '../images/back.png'
+import '../styles/BlogDetailView.css'
 
 const BlogDetailView = () => {
     let {id} = useParams();
@@ -34,11 +36,17 @@ const BlogDetailView = () => {
         setCommentsDetails(response.data.data.response)
     }
 
+    const routeBack = () => {
+
+    }
 
     if(Object.keys(blogDetails).length > 0){
         return (
             <div>
-                <Blog blog={blogDetails} />
+                <img className="bdv-align bdv-column" onClick={routeBack} src={Back} alt={"Back"}/>
+                <div className="bdv-row bdv-align-blog">
+                <Blog className="bdv-column" blog={blogDetails} />
+                </div>
                 <CommentList commentDetails={commentsDetails}/>
             </div>
         )

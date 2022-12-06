@@ -20,7 +20,7 @@ const BlogDetails = () => {
             }
         }
         getBlogs()
-    }, [blogs] )
+    }, [] )
 
 
     const blogsContent = blogs.map(blog => {
