@@ -26,5 +26,13 @@ The Application Will be Hosted in PORT : 3000
 * Goto Terminal
 * Type the Following Command to start the application
     * `npm start`
-    
+
+
+### To Run The Application using docker-compose as both front-end and back-end
+
+* Run the Following docker-compose command to Start
+  * `docker-compose -f docker-compose.yml up -d`
+* Run the Following docker-compose command to Stop
+  * `docker-compose -f docker-compose.yml down`
+
 
