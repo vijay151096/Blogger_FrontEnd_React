@@ -13,7 +13,7 @@ The Application Will be Hosted in PORT : 3000
 * Pull the Images from docker hub
     * `docker pull vijaykumar151096/blogger_frontend`
 * Run the Docker using Below Command
-    * `docker run -d -p 9005:9005 --name blogger_frontend vijaykumar151096/blogger_frontend`
+    * `docker run -d -p 3000:3000 --name blogger_frontend vijaykumar151096/blogger_frontend`
 * To Stop
     * `docker stop blogger_frontend`
 * To Start
